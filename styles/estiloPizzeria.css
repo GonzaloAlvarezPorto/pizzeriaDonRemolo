@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'El Messiri', sans-serif;
+}
+
+header{
+    height: 150px;
+    margin:0;
+    padding:0;
+}
+
+.cabecera{
+    padding:0;
+    margin:0;
+    background-color: orangered;
+    background-size: contain;
+    height: 100%;
+}
+
+.cabeceraContenedor{
+    height: 100%;
+    background-size: contain;
+    padding:0;
+    margin:0;
+}
+
+.cabeceraContenedor__logo{
+    background-image: url(../media/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding:0;
+    margin:0;
+    height: 130px;
+}
+
+.cabeceraContenedor__menuNavegacion{
+    background-color: blue;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding:0;
+    margin:0;
+    height: 20px;
+}
+
+.cabeceraContenedorMenuNavegacion__nav{
+    padding:0;
+    margin:0;
+}
