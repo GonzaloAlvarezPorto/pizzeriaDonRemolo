@@ -1,0 +1,42 @@
+.cabecera__contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 3rem;
+    position: sticky;
+    height: 40px;
+    top: 0;
+    
+    .contenedor__logo {
+        align-self: flex-start;
+
+        img {
+            width: 120px;
+        }
+    }
+
+    .contenedor__navBar {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+        .navBar__listado {
+            display: flex;
+            flex-direction: row;
+            padding: 0.3rem;
+            
+            .navBar__item{
+                padding: 0.3rem;
+                margin:0 0.3rem;
+                justify-content: space-between;
+                display: flex;
+                border:none;
+                background-color:transparent;
+                color: $blanco;
+                align-items: start;
+                font-size: 16px;
+            }
+        }
+    }
+}
