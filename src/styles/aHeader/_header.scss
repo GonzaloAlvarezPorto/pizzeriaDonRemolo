@@ -5,14 +5,24 @@
     align-items: center;
     padding: 0 1rem 0 3rem;
     position: sticky;
-    height: 40px;
+    height: 63px;
     top: 0;
+    background-color: black;
+    border-bottom: 1px solid $colorCabecera;
     
     .contenedor__logo {
         align-self: flex-start;
-
+        opacity: 0;  // Inicia siendo invisible
+        transform: translateY(-100%);  // Fuera de la vista, movido hacia arriba
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    
         img {
             width: 120px;
+        }
+    
+        &.visible {
+            opacity: 1;  // Se hace visible
+            transform: translateY(0);  // Vuelve a su posición original
         }
     }
 
@@ -20,7 +30,8 @@
         display: flex;
         flex-direction: row;
         align-items: baseline;
-
+        flex-wrap: wrap;
+        
         .navBar__listado {
             display: flex;
             flex-direction: row;
@@ -36,6 +47,7 @@
                 color: $blanco;
                 align-items: start;
                 font-size: 16px;
+                text-decoration: none;
             }
         }
     }

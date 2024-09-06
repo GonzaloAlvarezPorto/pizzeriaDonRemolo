@@ -1,5 +1,6 @@
 import React from 'react'
 import encabezados from '../../data/encabezado.json';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar = () => {
 
@@ -9,9 +10,9 @@ export const NavBar = () => {
             {titulos.length > 0 ? (
                 titulos.map((titulo, index) => (
                     <ul key={index} className='navBar__listado'>
-                        <button className='navBar__item'>
+                        <NavLink to={titulo.link} className='navBar__item'>
                             {titulo.nombre}
-                        </button>
+                        </NavLink>
                     </ul>
                 ))) : (<p>Nada que mostrar</p>)}
         </div>

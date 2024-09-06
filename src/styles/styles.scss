@@ -1,5 +1,11 @@
-@import "./dOtrosEstilos/_generales.scss";
 @import "./dOtrosEstilos/_variables.scss";
+@import "./dOtrosEstilos/_generales.scss";
 
 //cabecera
 @import "./aHeader/_header.scss";
+
+//main
+@import "./bMain/historia.scss";
+
+//footer
+@import "./cFooter/_footer.scss";

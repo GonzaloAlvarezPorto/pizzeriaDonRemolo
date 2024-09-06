@@ -1,17 +1,18 @@
 [
     {
-        "nombre": "HISTORIA"
+        "nombre": "HISTORIA",
+        "link":"historia"
     },
     {
-        "nombre": "CATÁLOGO"
+        "nombre": "CATÁLOGO",
+        "link":"catalogo"
     },
     {
-        "nombre": "PEDÍ"
+        "nombre": "HACÉ TU PEDIDO",
+        "link":"pedi"
     },
     {
-        "nombre": "CONTACTO"
-    },
-    {
-        "nombre":"🛒"
+        "nombre":"🛒",
+        "link":"tuCompra"
     }
 ]

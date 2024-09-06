@@ -1,0 +1,12 @@
+[
+        {
+            "nombreRed":"Facebook",
+            "imagenRed":"./media/img/facebook.png",
+            "enlaceRed":"https://www.facebook.com/"
+        },
+        {
+            "nombreRed":"Instagram",
+            "imagenRed":"./media/img/instagram.png",
+            "enlaceRed":"https://www.instagram.com/"
+        }
+    ]
