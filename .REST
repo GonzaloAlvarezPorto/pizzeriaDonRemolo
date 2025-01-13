@@ -1,0 +1,13 @@
+POST http://localhost:8080/api/histories
+Content-Type: application/json
+
+{
+            "paragraph": "Mateo"
+            ,
+            "order":9,
+            "image":"/front/public/assets/media/img/jamonymorron.jpg"
+        }
+
+###
+
+GET http://localhost:8080/api/histories

@@ -1,0 +1,14 @@
+.contenedor__error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .error__texto{
+        margin: 1rem;
+    }
+    .error__imagen{
+        width: 50%;
+        margin: 0 1rem 1rem;
+    }
+}

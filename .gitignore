@@ -1,1 +1,33 @@
+# Node.js
 node_modules/
+
+# Entorno
+.env
+.env.*
+
+# Compilación y distribución
+dist/
+build/
+out/
+
+# Logs
+*.log
+logs/
+
+# IDEs y editores
+.vscode/
+.idea/
+
+# Archivos temporales
+*.swp
+*.tmp
+*.bak
+.DS_Store
+
+# Vite y React
+.vite/
+.cache/
+
+# Archivos Sass/CSS compilados
+*.css
+*.css.map

@@ -1,0 +1,30 @@
+.historia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .historia__parrafo {
+        padding: 1rem 2rem;
+        color: $blanco;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        font-size: clamp(12px, 2vw, 26px);
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    .historia__imageContenedor{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+        .historia__image{
+            padding: 3rem
+        }
+    }
+}

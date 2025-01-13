@@ -1,0 +1,90 @@
+.contenedor__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $blanco;
+    text-align: center;
+
+    .main__apartado {
+        background-color: rgba(255, 255, 255, 0.2);
+        min-height: 300px;
+        margin: 0.5rem 0;
+        border-top: 1px solid $colorCabecera;
+        border-bottom: 1px solid $colorCabecera;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .apartado__carrusel {
+            position: relative; /* Contenedor relativo para los ítems absolutos */
+            width: 100%;
+            height: 100%; /* Aseguramos que ocupe todo el espacio disponible */
+
+            .carrusel__item {
+                position: absolute; /* Superpone los ítems */
+                top: 0;
+                left: 0;
+                width: 100%; /* Asegura que los ítems ocupen todo el ancho del contenedor */
+                height: 100%; /* Asegura que los ítems se ajusten al contenedor */
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                opacity: 0; /* Oculta los ítems inactivos */
+                transition: opacity 0.5s ease-in-out;
+
+                &.active {
+                    opacity: 1; /* Muestra el ítem activo */
+                    z-index: 1; /* Trae al frente el ítem activo */
+                }
+
+                .carrusel__titulo {
+                    display: flex;
+                    margin: 0.5rem;
+                    font-size: 24px;
+                    font-weight: bold;
+                    justify-content: center;
+                    width: 25%;
+                }
+
+                .carrusel__otraInfo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    min-height: 150px;
+                    border-left: 1px solid $blanco;
+                    border-right: 1px solid $blanco;
+                    width: 50%;
+
+                    .carrusel__descripcion {
+                        margin: 0.5rem 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .carrusel__precio {
+                        margin: 0.5rem;
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+                }
+
+                .carrusel__imagenContenedor {
+                    margin: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    width: 25%;
+
+                    .carrusel__imagen {
+                        width: 150px;
+                        border-radius: 5px;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+}
