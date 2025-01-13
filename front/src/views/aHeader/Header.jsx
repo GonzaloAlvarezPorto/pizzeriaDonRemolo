@@ -16,7 +16,7 @@ export const Header = () => {
     return (
         <div className='cabecera__contenedor'>
             <NavLink to="/" className={`contenedor__logo ${isVisible ? 'visible' : ''}`}>
-                <img src='/front/public/assets/media/img/cabeceraLogo.png' />
+                <img src='/assets/media/img/cabeceraLogo.png' />
             </NavLink>
             <NavBar />
         </div>

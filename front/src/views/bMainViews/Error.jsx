@@ -6,7 +6,7 @@ export const Error = () => {
             <p className='error__texto'>
                 ¿Perdido?
             </p>
-            <img className="error__imagen" src="/front/public/assets/media/img/error.png"/>
+            <img className="error__imagen" src="/assets/media/img/error.png"/>
         </div>
     )
 }
