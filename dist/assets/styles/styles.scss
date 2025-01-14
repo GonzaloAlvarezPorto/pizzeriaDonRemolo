@@ -1,0 +1,14 @@
+@import "./dOtrosEstilos/_variables.scss";
+@import "./dOtrosEstilos/_generales.scss";
+
+//cabecera
+@import "./aHeader/_header.scss";
+
+//main
+@import "./bMain/_historia.scss";
+@import "./bMain/_main.scss";
+@import "./bMain/_error.scss";
+@import "./bMain/_catalogo.scss";
+
+//footer
+@import "./cFooter/_footer.scss";

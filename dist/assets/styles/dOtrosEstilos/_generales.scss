@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-image: url('/assets/media/img/pizzaSalidaDelHorno.jpg');
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    margin-top: 90px;
+    color: $blanco;
+    min-height: 60vh;
+
+    .contenedor {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0.5rem 0;
+        border-top: 1px solid $colorCabecera;
+        border-bottom: 1px solid $colorCabecera;
+        min-height: 300px;
+    }
+}
