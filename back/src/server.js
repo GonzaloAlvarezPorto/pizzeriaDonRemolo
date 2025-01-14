@@ -10,14 +10,26 @@ import historiesRouter from './routes/histories.router.js';
 const app = express();
 
 dotenv.config();
+dotenv.config({ path: '.env.development' });
 
 const PORT = process.env.PORT;
 
 connectDB();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Permitir solo tu frontend (ajusta según el puerto que uses)
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permitir estos métodos HTTP
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      'http://localhost:5173', // Para desarrollo
+      'https://pizzeriadonremolo-nu.vercel.app', // Producción
+    ];
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true); // Permite la conexión
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
 }));
 
 app.use(express.json());
