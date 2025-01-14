@@ -12,7 +12,7 @@ export const NavBar = () => {
                 setHeaders(result.headers);
         };
         getHeaders();
-    })
+    },[])
 
 
     return (
