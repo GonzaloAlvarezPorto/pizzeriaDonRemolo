@@ -6,6 +6,7 @@
   "scripts": {
     "client": "vite",
     "start:server": "nodemon back/src/server.js",
+    "start": "node back/src/server.js",
     "dev": "concurrently \"npm run start:server\" \"npm run client\"",
     "build": "vite build",
     "lint": "eslint .",
