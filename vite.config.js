@@ -3,5 +3,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // Asegura que las rutas de recursos sean relativas
+  build: {
+    outDir: 'front/dist', // Verifica que la carpeta 'front/dist' sea la correcta
+  },
+  server: {
+    proxy: {
+      '/api': 'http://localhost:8080',
+    },
+  },
 });

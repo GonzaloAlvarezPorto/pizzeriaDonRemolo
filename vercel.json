@@ -6,9 +6,9 @@
             "use": "@vercel/node"
         },
         {
-            "src": "front/dist/**",
+            "src": "front/dist/*",
             "use": "@vercel/static"
-        }
+        } 
     ],
     "routes": [
         {
@@ -17,7 +17,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "front/dist/index.html"
-        }
+            "dest": "/front/dist/$1"
+        } 
     ]
 }
