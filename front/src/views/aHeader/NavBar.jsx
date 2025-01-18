@@ -8,6 +8,7 @@ export const NavBar = () => {
 
     useEffect(()=> {
         const getHeaders = async () => {
+            console.log('API Base URL:', apiBaseUrl); // Verifica la URL aquí
                 const response = await fetch(`${apiBaseUrl}`);
                 const result = await response.json();
                 setHeaders(result.headers);
