@@ -8,7 +8,7 @@ export const NavBar = () => {
 
     useEffect(()=> {
         const getHeaders = async () => {
-                const response = await fetch(`${apiBaseUrl/api/headers}`);
+                const response = await fetch(`${apiBaseUrl}/api/headers`);
                 const result = await response.json();
                 setHeaders(result.headers);
         };
