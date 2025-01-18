@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { CartContext } from '../../context/CartContext';
 
 export const Footer = () => {
 
   const [socials, setSocials] = useState([]);
+  const { apiBaseUrl } = useContext(CartContext);
 
   useEffect(() => {
     const getSocials = async () => {
-        const response = await fetch('http://localhost:8080/api/socials');
-        const result = await response.json();
+      const response = await fetch(`${apiBaseUrl}/socials`)
+      const result = await response.json();
 
-        setSocials(result.socials || []); // Actualiza el estado con el array de redes sociales
+      setSocials(result.socials || []); // Actualiza el estado con el array de redes sociales
     };
     getSocials();
   }, []);

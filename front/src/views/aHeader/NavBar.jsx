@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 export const NavBar = () => {
 
     const [headers, setHeaders] = useState([]);
+    
+    const { apiBaseUrl } = useContext(CartContext)
 
     useEffect(()=> {
         const getHeaders = async () => {
-                const response = await fetch('http://localhost:8080/api/headers');
+                const response = await fetch(`${apiBaseUrl}/headers`);  // Usar la ruta correcta
                 const result = await response.json();
                 setHeaders(result.headers);
         };

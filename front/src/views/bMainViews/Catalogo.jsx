@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 export const Catalogo = () => {
   const [foods, setFoods] = useState([]); // Lista de alimentos
+  
+  const { apiBaseUrl } = useContext(CartContext)
 
   useEffect(() => {
     const getFoods = async () => {
-      const result = await fetch('http://localhost:8080/api/foods').then(res => res.json());
+      const result = await fetch(`${apiBaseUrl}/foods`)
+      .then(res => res.json());
       setFoods(result.foods);
     };
     getFoods();

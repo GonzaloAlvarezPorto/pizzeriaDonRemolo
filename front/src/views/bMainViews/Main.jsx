@@ -3,10 +3,11 @@ import React, { useState, useEffect } from 'react';
 export const Main = () => {
   const [foods, setFoods] = useState([]); // Lista de alimentos
   const [activeIndex, setActiveIndex] = useState(0); // Índice del ítem activo
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     const getFoods = async () => {
-      const result = await fetch('http://localhost:8080/api/foods').then(res => res.json());
+      const result = await fetch('/api/foods').then(res => res.json());
       const filteredFoods = result.foods.filter(food => food.novedad === true); // Filtrar novedades
       setFoods(filteredFoods);
     };

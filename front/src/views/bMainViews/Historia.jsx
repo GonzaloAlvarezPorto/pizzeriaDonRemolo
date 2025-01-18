@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 export const Historia = () => {
     const [histories, setHistories] = useState([]);
+    const { apiBaseUrl } = useContext(CartContext);
 
     useEffect(() => {
         // Hacer la solicitud a la API para obtener los datos
         const getOrderedHistories = async () => {
-            const response = await fetch('http://localhost:8080/api/histories');
+            const result = await fetch(`${apiBaseUrl}/histories`)
             const data = await response.json();
 
             if (data && Array.isArray(data.histories)) {

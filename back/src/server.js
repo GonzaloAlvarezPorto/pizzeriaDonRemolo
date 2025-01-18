@@ -19,18 +19,19 @@ connectDB();
 app.use(cors({
   origin: (origin, callback) => {
     const allowedOrigins = [
-      'http://localhost:5173', // Para desarrollo
-      'https://pizzeriadonremolo-nu.vercel.app', // Producción
+      'http://localhost:5173',  // Para desarrollo
+      'https://pizzeriadonremolo-nu.vercel.app',  // Producción
     ];
 
     if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true); // Permite la conexión
+      callback(null, true);  // Permite la conexión
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Métodos permitidos
 }));
+
 
 app.use(express.json());
 app.use('/api/foods', foodsRouter);
