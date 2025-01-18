@@ -7,7 +7,7 @@ export const NavBar = () => {
 
     useEffect(()=> {
         const getHeaders = async () => {
-                const response = await fetch('http://localhost:8080/api/headers');
+                const response = await fetch(import.meta.env.VITE_MONGO_URI);
                 const result = await response.json();
                 setHeaders(result.headers);
         };
